@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""FileStorage class for serializing and deserializing instances to a JSON file"""
+"""
+FileStorage class for serializing and deserializing
+instances to a JSON file.
+"""
 import json
 import os
 
@@ -34,4 +37,3 @@ class FileStorage:
                 obj_dict = json.load(f)
                 for key, val in obj_dict.items():
                     FileStorage.__objects[key] = BaseModel(**val)
-
