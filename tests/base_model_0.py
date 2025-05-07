@@ -8,3 +8,4 @@ time.sleep(0.01)
 model.save()
 assert model.updated_at > prev
 print("OK")
+print("Test started")
