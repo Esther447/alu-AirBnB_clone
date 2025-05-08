@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-from uuid import uuid4
+import uuid
 from datetime import datetime
+from models import storage
 
 class BaseModel:
+    """Base class for all models"""
+
     def __init__(self, *args, **kwargs):
+        """Initialize a new instance"""
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
@@ -11,19 +15,22 @@ class BaseModel:
                 elif key != "__class__":
                     setattr(self, key, value)
         else:
-            self.id = str(uuid4())
-            self.created_at = self.updated_at = datetime.now()
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
+            storage.new(self)
 
     def __str__(self):
-        """Returns the string representation of the instance."""
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        """String representation"""
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
-        """Updates the updated_at attribute with current datetime."""
+        """Updates updated_at and saves instance"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
-        """Returns a dictionary of the instance with ISO format dates and class name."""
+        """Returns a dictionary representation"""
         dict_copy = self.__dict__.copy()
         dict_copy["__class__"] = self.__class__.__name__
         dict_copy["created_at"] = self.created_at.isoformat()
