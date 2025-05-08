@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import json
+from models.base_model import BaseModel  # Add this
+from models.user import User
 
 class FileStorage:
     """Serializes instances to a JSON file and deserializes them back to instances."""
@@ -9,7 +11,8 @@ class FileStorage:
 
     classes = {
         'BaseModel': BaseModel,
-        'User': User
+        'User': User,
+        # add other classes as needed
     }
 
     def all(self):
