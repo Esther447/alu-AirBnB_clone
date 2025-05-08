@@ -9,4 +9,4 @@ if os.path.exists(file_path):
 
 bm = BaseModel()
 storage.save()
-print(os.path.exists(file_path) and "OK" or "FAIL")
+print("OK" if os.path.exists(file_path) else "FAIL")

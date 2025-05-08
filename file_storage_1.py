@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 from models.engine.file_storage import FileStorage
 
-fs = FileStorage()
-print(type(fs._FileStorage__objects) == dict and "OK" or "FAIL")
+fs = FileStorag()
+print("OK" if type(fs._FileStorage__objects) is dict else "FAIL")

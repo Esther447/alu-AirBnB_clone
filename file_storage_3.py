@@ -4,4 +4,4 @@ from models.base_model import BaseModel
 
 bm = BaseModel()
 key = "BaseModel.{}".format(bm.id)
-print(key in storage.all() and "OK" or "FAIL")
+print("OK" if key in storage.all() else "FAIL")
