@@ -1,7 +1,15 @@
 #!/usr/bin/python3
-"""Defines a class User."""
+
+"""This file defines the City Model
+It inherits from the BaseModel
+"""
+
+from models.base_model import BaseModel
 
 
-class City:
-    """Placeholder for City class."""
-    pass
+class City(BaseModel):
+    """The City Model"""
+
+    # Attributes
+    name = ""
+    state_id = ""

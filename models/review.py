@@ -1,7 +1,16 @@
 #!/usr/bin/python3
-"""Defines a class User."""
+
+"""This file defines the Review Model
+It inherits from the BaseModel
+"""
+
+from models.base_model import BaseModel
 
 
-class Review:
-    """Placeholder for Review class."""
-    pass
+class Review(BaseModel):
+    """The Review Model"""
+
+    # Attributes
+    place_id = ""
+    user_id = ""
+    text = ""

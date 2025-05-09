@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""Defines a class User."""
+
+"""This file defines the Amenity Model
+It inherits from the BaseModel
+"""
+
+from models.base_model import BaseModel
 
 
-class Amenity:
-    """Placeholder for Amenity class"""
-    pass
+class Amenity(BaseModel):
+    """The Amenity Model"""
+
+    # Attributes
+    name = ""

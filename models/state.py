@@ -1,8 +1,18 @@
 #!/usr/bin/python3
-"""Defines the State class."""
+
+"""This file defines the UserModel class
+It inherits from the BaseModel
+"""
+
 
 from models.base_model import BaseModel
 
-class State(BaseModel):
-    """Represents a state."""
-    name = ""
+
+class User(BaseModel):
+    """The User Model"""
+
+    # Attributes
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""
