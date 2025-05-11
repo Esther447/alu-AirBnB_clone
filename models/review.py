@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Review class that inherits from BaseModel"""
-
+"""
+Review Module for HBNB project
+"""
 from models.base_model import BaseModel
 
+
 class Review(BaseModel):
-    """Review model"""
+    """Review class that inherits from BaseModel"""
     place_id = ""
     user_id = ""
     text = ""

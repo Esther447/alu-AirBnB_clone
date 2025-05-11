@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-
-"""This file defines the Place Model
-It inherits from the BaseModel
 """
-
+Place Module for HBNB project
+"""
 from models.base_model import BaseModel
-from typing import List
 
 
 class Place(BaseModel):
-    """The Place Model"""
-
-    # Attributes
+    """Place class that inherits from BaseModel"""
     city_id = ""
     user_id = ""
     name = ""
