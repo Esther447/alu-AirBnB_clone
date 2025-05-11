@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""State module for the AirBnB clone"""
+
+"""This file defines the State Model
+It inherits from the BaseModel
+"""
+
 
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """State class that inherits from BaseModel"""
+    """The State Model"""
+
+    # Attributes
     name = ""
