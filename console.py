@@ -17,7 +17,11 @@ from models.place import Place
 from models.review import Review
 
 # Global variable of registered models
-classes = storage.models
+from models.base_model import BaseModel
+
+classes = {
+    "BaseModel": BaseModel
+}
 
 
 class HBNBCommand(Cmd):
