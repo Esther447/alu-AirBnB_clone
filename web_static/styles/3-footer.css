@@ -10,4 +10,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: center;
+  position: relative;
+
 }
