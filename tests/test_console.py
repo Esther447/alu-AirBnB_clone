@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 """Defines the HBNB command interpreter."""
 import cmd
+import unittest
 import re
+from io import StringIO
+from unittest.mock import patch
+from console import HBNBCommand
 from shlex import split
 from models import storage
 from models.base_model import BaseModel
@@ -12,6 +16,25 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 
+
+class TestConsole(unittest.TestCase):
+    def test_quit_command(self):
+        with patch('sys.stdout', new=StringIO()) as f:
+            self.assertTrue(HBNBCommand().onecmd("quit"))
+
+    def test_EOF_command(self):
+        with patch('sys.stdout', new=StringIO()) as f:
+            self.assertTrue(HBNBCommand().onecmd("EOF"))
+
+    def test_empty_line(self):
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("")
+            self.assertEqual(f.getvalue(), "")
+
+    # Add the other tests from above here
+
+if __name__ == '__main__':
+    unittest.main()
 
 def parse(arg):
     """Parse arguments and split them properly."""
