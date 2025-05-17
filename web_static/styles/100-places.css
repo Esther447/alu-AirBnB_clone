@@ -1,0 +1,125 @@
+.places {
+  margin-top: 30px;
+}
+
+.places h1 {
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.places article {
+  width: 390px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ff5a5f;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.title_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title_box h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.price_by_night {
+  color: #ff5a5f;
+  border: 4px solid #ff5a5f;
+  border-radius: 50%;
+  min-width: 60px;
+  height: 60px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.information div {
+  width: 100px;
+  text-align: center;
+}
+
+.user {
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+/* Amenities section */
+.amenities {
+  margin-top: 40px;
+}
+
+.amenities h2 {
+  font-size: 16px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 5px;
+}
+
+.amenities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.amenities li {
+  padding: 5px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.amenities li::before {
+  content: \"•\";
+  position: absolute;
+  left: 0;
+  color: #ff5a5f;
+}
+
+/* Reviews section */
+.reviews {
+  margin-top: 40px;
+}
+
+.reviews h2 {
+  font-size: 16px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 5px;
+}
+
+.reviews ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reviews li {
+  margin-bottom: 10px;
+}
+
+.reviews h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.reviews p {
+  font-size: 12px;
+  margin: 5px 0 0 0;
+}
